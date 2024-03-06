@@ -18,9 +18,9 @@ def matrix_reshape_from_flat(grid_data, coord_dims ,comp2d=True, plot_dims=[]):
     permutations = permutations[indx]
     item_num = item_num[indx]
 
-    indx2 = np.lexsort(np.rot90(grid_data[:,1:]), axis=0)
+    indx2 = np.lexsort(np.rot90(grid_data[:,coord_dims]), axis=0)
     grid_data = grid_data[indx2]
-    grid_vals = grid_data[:,1:]
+    grid_vals = grid_data[:,coord_dims]
 
     c = 0
     for i in range(len(grid_vals)):
