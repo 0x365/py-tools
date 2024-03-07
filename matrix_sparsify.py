@@ -66,17 +66,5 @@ def dense_to_sparse(dense_matrix, coord_dims):
         except:
             sparse_matrix.append((np.swapaxes(meshes[i], 0, 1))[valid_items])
             # print(np.swapaxes(meshes[i][:,0],0,1))    
-    # print(sparse_matrix)
 
-    # print(np.shape(meshes))
-    # sparse_matrix = [flat_dense[~np.isnan(flat_dense)]]
-    # c = 0
-    # for x in meshes:
-    #     saver = (np.rot90(x, k=c))
-    #     print(saver.flatten()[~np.isnan(flat_dense)])
-    #     sparse_matrix.append(np.rot90(x, k=c).flatten()[~np.isnan(flat_dense)])
-    #     c+=1
-        # print(x.flatten()[~np.isnan(flat_dense)])
-
-    # return np.rot90(np.array(sparse_matrix))
     return np.array(np.rot90(sparse_matrix))
