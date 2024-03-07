@@ -45,13 +45,14 @@ def dense_to_sparse(dense_matrix, coord_dims):
     dense_matrix =  np.array(dense_matrix)
     coord_dims = np.asanyarray(coord_dims, dtype=object)
 
-    meshes = np.meshgrid(*coord_dims)
 
+    meshes = np.meshgrid(*coord_dims)
+    print(coord_dims)
     # print(np.shape(meshes[0]))
 
-
+    
     valid_items = np.logical_not(np.isnan(dense_matrix))
-
+    print(np.shape(valid_items))
     sparse_matrix = [dense_matrix[valid_items]]
     # print("Valid items:", np.shape(valid_items))
 
@@ -61,10 +62,10 @@ def dense_to_sparse(dense_matrix, coord_dims):
         # print(meshes[i])
         try:
             sparse_matrix.append(((meshes[i]))[valid_items])
-            # print(meshes[i])    
+            # print(meshes[i][:,0])    
         except:
             sparse_matrix.append((np.swapaxes(meshes[i], 0, 1))[valid_items])
-            # print(np.swapaxes(meshes[i],0,1))    
+            # print(np.swapaxes(meshes[i][:,0],0,1))    
     # print(sparse_matrix)
 
     # print(np.shape(meshes))
@@ -79,4 +80,3 @@ def dense_to_sparse(dense_matrix, coord_dims):
 
     # return np.rot90(np.array(sparse_matrix))
     return np.array(np.rot90(sparse_matrix))
-    # print(flat_dense[~np.isnan(flat_dense)])
