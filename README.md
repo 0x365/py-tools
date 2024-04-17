@@ -7,7 +7,7 @@ Libraries
 - [Dev Stuff](./dev)
 
 
-##Paths
+## Paths
 ```python
 import os
 
