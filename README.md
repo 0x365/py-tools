@@ -2,9 +2,9 @@
 Python code a functions for copying into other programs.
 
 Libraries
-- (IO)[./funcs/io]
-- (URL)[./funcs/url]
-- (Dev Stuff)[./dev]
+- [IO](./funcs/io)
+- [URL](./funcs/url)
+- [Dev Stuff](./dev)
 
 
 ##Paths
