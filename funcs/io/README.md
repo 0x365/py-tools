@@ -53,22 +53,10 @@ import csv
 # Input
 def csv_input(file_name):
     with open(file_name, "r") as f:
-        read_obj = csv.reader(f, delimter=' ')
+        read_obj = csv.reader(f)
         output = []
         for row in read_obj:
-            try:
-                temp = []
-                for item in row:
-                    temp.append(eval(row))
-                output.append(temp)
-            except:
-                try:
-                    output.append(eval(row))
-                except:
-                    try:
-                        output.append(row)
-                    except:
-                        output = row    
+            output.append(row)   
     f.close()
     return output
 
