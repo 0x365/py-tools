@@ -18,3 +18,12 @@ cbar = plt.colorbar(im, shrink=0.5, anchor=(-2,0.7))
 cbar.set_label("Colorbar Label")
 plt.savefig("image.png", dpi=1000, bbox_inches='tight')
 ```
+
+## Other stuff
+```python
+# Invert y axis (or x axis)
+plt.gca().invert_yaxis()
+
+# Make space for tick markers
+plt.tight_layout()
+```
