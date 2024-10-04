@@ -8,6 +8,15 @@ Libraries
 - [Dev Stuff](./dev)
 
 
+## Drop into Colab
+
+```python
+!git clone --depth=1 git://0x365/py-tools py_tools
+!rm -rf ./py_tools/.git
+!pip install -r requirements.txt
+from py_tools.commons import *
+```
+
 ## Paths
 ```python
 import os
